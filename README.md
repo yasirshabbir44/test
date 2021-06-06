@@ -50,14 +50,14 @@ Muhammad| Zuhayr Azhar| 3
 |Model name          |Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
 |Stepping            |10
 
-* As above mentioned I have 6 core and two thread per core possible to run
-* So I have done `TaskExecutor` on top of my machine
+* As above mentioned I have 6 core and two thread per core possible to run in my machine.
+* So I have done `TaskExecutor` on top of my machine.
 
 ```
 @Bean
 public TaskExecutor taskExecutor() {
     ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-    executor.setCorePoolSize(8);
+    executor.setCorePoolSize(12);
     executor.setMaxPoolSize(12);
     executor.setQueueCapacity(200);
     executor.setThreadNamePrefix("userThread-");
@@ -84,4 +84,13 @@ huge-data-processor/build/jacoco/test/html/index.html
 ##### Current performance test:
 * 16 lack records file size 28 MB processed in 18s
 * Current `csv` file have only three columns if we increase columns then 16 lack records file size will around 400 MB.
-* I believe we can process 1 GB data.  
+* I believe we can process 1 GB data.
+
+##### Sequence Diagrams:
+* Data process sequence diagram:
+
+![data-process](data-processor-sequence-diagram.jpg)
+
+* Spring Batch Job sequence diagram:
+
+![Spring-Batch-Sequence](SpringBatch-Sequence-diagram.jpg)
