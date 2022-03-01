@@ -5,7 +5,7 @@ plugins {
 	id 'jacoco'
 }
 
-group = 'com.az.assignment'
+group = 'com.yasir.assignment'
 version = '0.0.1'
 sourceCompatibility = '1.8'
 
@@ -38,7 +38,7 @@ test {
 }
 
 jacoco {
-	toolVersion = "0.8.5"
+	toolVersion = "0.8.6"
 	reportsDir = file("$buildDir/jacoco")
 }
 
@@ -53,12 +53,12 @@ jacocoTestReport {
 	afterEvaluate {
 		classDirectories.setFrom(files(classDirectories.files.collect {
 			fileTree(dir: it, exclude:  [
-					'com/az/assignment/config/**',
-					'com/az/assignment/entity/**',
-					'com/az/assignment/exception/**',
-					'com/az/assignment/HugeDataProcessorApplication.class',
-					'com/az/assignment/util/FileUtil.class',
-					'com/az/assignment/component/FileDeletingTasklet.class'
+					'com/yasir/assignment/config/**',
+					'com/yasir/assignment/entity/**',
+					'com/yasir/assignment/exception/**',
+					'com/yasir/assignment/HugeDataProcessorApplication.class',
+					'com/yasir/assignment/util/FileUtil.class',
+					'com/yasir/assignment/component/FileDeletingTasklet.class'
 			])
 		}))
 	}

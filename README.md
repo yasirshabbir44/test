@@ -1,4 +1,4 @@
-### Az-Huge-Data-File-Processor
+### Huge-Data-File-Processor
 * It's a `spring boot microservice` to process big file efficiently and store into DB.
 
 #### Non Functional Requirements
@@ -10,7 +10,7 @@
 * Backend we need to Process via Spring Batch to store this file into DB.
   - We should fine tune spring batch to achieve good performance with the help of `TaskExecutor`
 * We need to use `H2` in-memory DB.
-* We will consider `users.csv` with `columns [first_name, last_name, age]` to be uploaded.
+* We will consider `products.csv` with `columns [name, price, age]` to be uploaded.
 
 #### How to run
 * It's a gradle project simply run below commands to run
@@ -19,16 +19,16 @@
 ```
 
 #### Swagger-UI
-* Swagger already integrated please check [this url](http://localhost:8080/swagger-ui/index.html#/user-controller/processCsvDataUsingPOST)
+* Swagger already integrated please check [this url](http://localhost:8080/swagger-ui/index.html#/product-controller/processCsvDataUsingPOST)
 
 ![Swagger-UI](swagger-ui.jpg)
 
 #### CSV file:
-|first_name|last_name|age|
-|---|---|---|
-Ali|Azhar|1
-Umaima| Azhar| 5
-Muhammad| Zuhayr Azhar| 3
+| name|     | price |
+|----------|-----|-------|
+ Apple      |     | 1     
+ Samsung   |     | 5     
+ OPPO |     | 3     
 
 ##### Thread configuration for TaskExecutor
 * Below are my Ubuntu machine details:
@@ -87,9 +87,7 @@ huge-data-processor/build/jacoco/test/html/index.html
 * I believe we can process 1 GB data.
 
 ##### Sequence Diagrams:
-* Data process sequence diagram:
 
-![data-process](data-processor-sequence-diagram.jpg)
 
 * Spring Batch Job sequence diagram:
 
