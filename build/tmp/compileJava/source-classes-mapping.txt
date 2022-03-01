@@ -1,7 +1,8 @@
 com/yasir/assignment/exception/CustomRuntimeException.java
  com.yasir.assignment.exception.CustomRuntimeException
-com/yasir/assignment/exception/CustomExceptionHandler.java
- com.yasir.assignment.exception.CustomExceptionHandler
+com/yasir/assignment/config/SpringBatchConfig.java
+ com.yasir.assignment.config.SpringBatchConfig
+ com.yasir.assignment.config.SpringBatchConfig$1
 com/yasir/assignment/component/JobCompletionNotificationListener.java
  com.yasir.assignment.component.JobCompletionNotificationListener
 com/yasir/assignment/component/ProductItemProcessor.java
@@ -27,6 +28,5 @@ com/yasir/assignment/service/ProductService.java
  com.yasir.assignment.service.ProductService
 com/yasir/assignment/entity/Product.java
  com.yasir.assignment.entity.Product
-com/yasir/assignment/config/SpringBatchConfig.java
- com.yasir.assignment.config.SpringBatchConfig
- com.yasir.assignment.config.SpringBatchConfig$1
+com/yasir/assignment/exception/CustomExceptionHandler.java
+ com.yasir.assignment.exception.CustomExceptionHandler
